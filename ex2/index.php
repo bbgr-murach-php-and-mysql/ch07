@@ -27,9 +27,14 @@
                 <?php } ?>
             </select>
             <br>
+
             <label>Yearly Interest Rate:</label>
-            <input type="text" name="interest_rate"
-                   value="<?php echo $interest_rate; ?>"/><br>
+            <select name="interest_rate">
+                <?php for($interest_rate = 4.0; $interest_rate <= 12.0; $interest_rate+=0.5) { ?>
+                    <option value="<?php echo $interest_rate ?>"><?php echo number_format($interest_rate, 1) . "%" ?></option>
+                <?php } ?>
+                </select>
+            <br>
 
             <label>Number of Years:</label>
             <input type="text" name="years"
