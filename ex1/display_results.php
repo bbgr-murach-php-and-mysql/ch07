@@ -18,6 +18,8 @@
     $wants_updates = isset($_POST['wants_updates']) ? 'Yes' : 'No';
 
     $contact_via = filter_input(INPUT_POST, 'contact_via');
+
+    $comments = nl2br(htmlspecialchars(filter_input(INPUT_POST, 'comments')), false);
 ?>
 <!DOCTYPE html>
 <html>
