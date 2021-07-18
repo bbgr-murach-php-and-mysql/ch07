@@ -8,6 +8,10 @@
 
     // for the heard_from radio buttons,
     // display a value of 'Unknown' if the user doesn't select a radio button
+    $heard_from = filter_input(INPUT_POST, 'heard_from');
+    if($heard_from === NULL) {
+        $heard_from = "Unknown";
+    }
 
     // for the wants_updates check box,
     // display a value of 'Yes' or 'No'
