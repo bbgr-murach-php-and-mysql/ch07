@@ -15,6 +15,7 @@
 
     // for the wants_updates check box,
     // display a value of 'Yes' or 'No'
+    $wants_updates = isset($_POST['wants_updates']) ? 'Yes' : 'No';
 ?>
 <!DOCTYPE html>
 <html>
