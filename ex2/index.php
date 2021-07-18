@@ -21,12 +21,20 @@
 
         <div id="data">
             <label>Investment Amount:</label>
-            <input type="text" name="investment"
-                   value="<?php echo $investment; ?>"/><br>
+            <select name="investment">
+                <?php for($i = 0; $i <= 50000; $i+=5000) { ?>
+                <option value="<?php echo $i ?>"><?php echo "$" . number_format($i) ?></option>
+                <?php } ?>
+            </select>
+            <br>
 
             <label>Yearly Interest Rate:</label>
-            <input type="text" name="interest_rate"
-                   value="<?php echo $interest_rate; ?>"/><br>
+            <select name="interest_rate">
+                <?php for($interest_rate = 4.0; $interest_rate <= 12.0; $interest_rate+=0.5) { ?>
+                    <option value="<?php echo $interest_rate ?>"><?php echo number_format($interest_rate, 1) . "%" ?></option>
+                <?php } ?>
+                </select>
+            <br>
 
             <label>Number of Years:</label>
             <input type="text" name="years"
